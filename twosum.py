@@ -35,13 +35,12 @@ checking if the value exists in the hashmpa which is also a constant time operat
 the time complexity therefore is big O(n). we are using extra memory right. the hasmpa isn't free.
 memroy complexity is also big O(n) because we could potentially put every value to the hashmap
 '''
-class twosum:
-    def twosum(self, nums: List[int], target: int) -> List[int]:
-        prevMap = {} # value : index
+def twosum(self, nums: List[int], target: int) -> List[int]:
+    prevMap = {} # value : index
 
-        for i, n in enumerate(nums):
-            diff = target - n
-            if diff in prevMap:
-                return [prevMap[diff], i]
-            prevMap[n] = i
-        return
+    for i, n in enumerate(nums):
+        diff = target - n
+        if diff in prevMap:
+            return [prevMap[diff], i]
+        prevMap[n] = i
+    return
